@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Pizza Restaurant API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" 
+  },
+  "item": [
+    {
+      "name": "GET Restaurants",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/restaurants"
+      }
+    },
+    {
+      "name": "GET Restaurant by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/restaurants/1"
+      }
+    },
+    {
+      "name": "DELETE Restaurant by ID",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/restaurants/1"
+      }
+    },
+    {
+      "name": "GET Pizzas",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/pizzas"
+      }
+    },
+    {
+      "name": "Create Restaurant-Pizza Association",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:5000/restaurant_pizzas",
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "raw": "{\n  \"price\": 5,\n  \"pizza_id\": 1,\n  \"restaurant_id\": 1\n}"
+        }
+      }
+    }
+  ]
+}
